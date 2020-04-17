@@ -3,13 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Tiles in Between</title>
+    <title>Unity WebGL Player | For the King</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      UnityLoader.instantiate("unityContainer", "Build/Armor Games v1.0.json");
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Git Hub.json", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
-    <div id="unityContainer" style="width: 800px; height: 450px; margin: auto"></div>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 800px; height: 450px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">For the King</div>
+      </div>
+    </div>
   </body>
 </html>
